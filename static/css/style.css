@@ -1,0 +1,206 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.menu-bar {
+    background-color: #2d2d2d;
+    padding: 10px;
+    border-bottom: 1px solid #3a3a3a;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.menu-item:hover {
+    color: #0078d4;
+}
+
+.notepad-icon {
+    margin-right: 5px;
+}
+
+.notepad-icon.logo {
+    width: 24px;
+    height: 24px;
+}
+
+#brendanLink {
+    margin-right: 20px;
+}
+
+#brendanLink:hover {
+    color: #0078d4;
+}
+
+#encodingSelect, #fontSelect {
+    background-color: #3c3c3c;
+    color: #ffffff;
+    border: 1px solid #555555;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+#encodingSelect:hover, #encodingSelect:focus,
+#fontSelect:hover, #fontSelect:focus {
+    background-color: #4c4c4c;
+    border-color: #0078d4;
+}
+
+#encodingSelect option, #fontSelect option {
+    background-color: #3c3c3c;
+    color: #ffffff;
+}
+
+#editor {
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    resize: none;
+    font-size: 14px;
+    line-height: 1.6;
+    background-color: #252526;
+    color: #d4d4d4;
+    white-space: pre;
+    overflow-wrap: normal;
+    overflow-x: auto;
+    font-family: Consolas, 'Courier New', Monaco, 'Roboto Mono', Arial, Verdana, 'Times New Roman', Georgia, Palatino, Wingdings, monospace;
+}
+
+#editor.wrap {
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    overflow-x: hidden;
+}
+
+#editor:focus {
+    outline: none;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+    background-color: #2d2d2d;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #3a3a3a;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.close {
+    color: #999999;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#findInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #3c3c3c;
+    border: 1px solid #555555;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#findButton {
+    padding: 10px 20px;
+    background-color: #0078d4;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+#findButton:hover {
+    background-color: #2b90d9;
+}
+
+#printBtn {
+    transition: color 0.3s;
+}
+
+#printBtn:hover {
+    color: #0078d4;
+}
+
+#wrapText {
+    margin-right: 5px;
+}
+
+/* Brendan Modal Styles */
+#brendanModal .modal-content {
+    text-align: center;
+}
+
+.brendan-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 15px;
+}
+
+.brendan-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.brendan-byline {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.brendan-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0078d4;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.brendan-link:hover {
+    background-color: #2b90d9;
+}

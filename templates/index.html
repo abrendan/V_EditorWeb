@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V_EditorWeb</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="menu-bar">
+        <span class="menu-item" id="brendanLink">
+            <svg class="notepad-icon logo" id="brendanIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="currentColor" d="M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M7,17H17V7H7V17M9,9H15V11H9V9M9,13H15V15H9V13Z" />
+            </svg>
+        </span>
+        <span class="menu-item" id="openBtn">Open</span>
+        <input type="file" id="fileInput" style="display: none;">
+        <span class="menu-item" id="saveBtn">Save</span>
+        <span class="menu-item" id="findBtn">Find</span>
+        <span class="menu-item" id="printBtn">Print</span>
+        <select id="encodingSelect" class="menu-item">
+            <option value="utf-8">UTF-8</option>
+            <option value="ascii">ASCII</option>
+            <option value="iso-8859-1">ISO-8859-1</option>
+            <option value="windows-1252">Windows-1252</option>
+        </select>
+        <select id="fontSelect" class="menu-item">
+            <option value="Consolas">Consolas</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Monaco">Monaco</option>
+            <option value="Roboto Mono">Roboto Mono</option>
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Palatino">Palatino</option>
+            <option value="Wingdings">Wingdings</option>
+        </select>
+        <label class="menu-item">
+            <input type="checkbox" id="wrapText"> Wrap Text
+        </label>
+    </div>
+    <textarea id="editor" spellcheck="false"></textarea>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <input type="text" id="findInput" placeholder="Enter text to find...">
+            <button id="findButton">Find</button>
+        </div>
+    </div>
+
+    <div id="brendanModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <svg class="brendan-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48">
+                <path fill="currentColor" d="M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.9,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M19,5V19H5V5H19M7,17H17V7H7V17M9,9H15V11H9V9M9,13H15V15H9V13Z" />
+            </svg>
+            <p class="brendan-description">V_EditorWeb: A web-based Notepad-like application using Flask and Vanilla JS, simulating local file operations</p>
+            <p class="brendan-byline">by abrendan</p>
+            <a href="https://www.abrendan.dev/" target="_blank" class="brendan-link">Visit abrendan.dev</a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/editor.js') }}"></script>
+</body>
+</html>
